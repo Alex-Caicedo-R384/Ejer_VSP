@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('ClienteID')->constrained('clientes'); // Establece la relación con clientes
+            $table->string('Nombre'); // Agrega el campo Nombre
+            $table->decimal('Monto', 10, 2); // Agrega el campo Monto
+            $table->date('Fecha'); // Agrega el campo Fecha
             $table->timestamps();
         });
     }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('cruces', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('ClienteID')->constrained('clientes'); // Relación con clientes
+            $table->decimal('SumaMontos', 10, 2)->nullable(); // Campo para la suma de montos
+            $table->string('Nombre'); // Campo para el nombre del cliente
             $table->timestamps();
         });
     }
