@@ -3,11 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\ContratoController;
-use App\Http\Controllers\CruceController; // Asegúrate de importar el CruceController
+use App\Http\Controllers\CruceController;
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+// Ruta principal que redirige al índice de clientes
+Route::get('/', [ClienteController::class, 'index'])->name('clientes.index');
 
 // Rutas de Clientes
 Route::resource('clientes', ClienteController::class);
