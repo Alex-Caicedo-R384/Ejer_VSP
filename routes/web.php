@@ -6,7 +6,9 @@ use App\Http\Controllers\ContratoController;
 use App\Http\Controllers\CruceController;
 
 // Ruta principal que redirige al índice de clientes
-Route::get('/', [ClienteController::class, 'index'])->name('clientes.index');
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Rutas de Clientes
 Route::resource('clientes', ClienteController::class);
