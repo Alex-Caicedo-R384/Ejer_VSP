@@ -12,6 +12,13 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://Ejer_VSP.com",
+
+        "DB_CONNECTION": "sqlsrv",
+        "DB_HOST": "vsp-ejer.database.windows.net",
+        "DB_PORT": "1433",
+        "DB_DATABASE": "Ejer_VSP",
+        "DB_USERNAME": "alex321",
+        "DB_PASSWORD": "VSP12345?",
   
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
